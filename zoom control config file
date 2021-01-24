@@ -1,0 +1,116 @@
+{
+  "adapters": [
+    {
+      "model": "GenericNetworkAdapter",
+      "ip": "tcp://192.168.0.10:5055",
+      "ports": [
+        {
+          "id": "sl_pr",
+          "name": "Проектор",
+          "methods": [
+            {
+              "id": "power",
+              "name": "Power",
+              "command": "Pr_%",
+              "params": [
+                {"id": "on",  "name": "On",  "value": "On"},
+                {"id": "off", "name": "Off", "value": "Off"}
+              ],
+              "type": "actions"
+            },
+            {
+              "id": "level", "name": "Выбор источника", "command": "Pr_%",
+              "params": [
+			    {"id": "zoom", "name": "Zoom", "value": "0"},
+                {"id": "1",    "name": "1",    "value": "1"},
+                {"id": "2",    "name": "2",    "value": "2"},
+                {"id": "3",    "name": "3",    "value": "3"}
+				],
+				"type": "actions"
+            },
+            {
+              "id": "level2", "name": " ", "command": "Pr_%",
+              "params": [
+                {"id": "4",    "name": "4",    "value": "4"},
+                {"id": "5",    "name": "5",    "value": "5"},
+                {"id": "6",    "name": "6",    "value": "6"}
+              ],
+              "type": "actions"
+            }
+			     
+          ]
+        }
+      ]
+    },
+	{
+	
+      "model": "GenericNetworkAdapter",
+      "ip": "tcp://192.168.0.10:5055",
+      "ports": [
+        {
+          "id": "sl_tv",
+          "name": "TV",
+          "methods": [
+           {
+              "id": "power",
+              "name": "Power",
+              "command": "Tv_%",
+              "params": [
+                {"id": "on",  "name": "On",  "value": "On"},
+                {"id": "off", "name": "Off", "value": "Off"}
+              ],
+              "type": "actions"
+            },
+			{
+              "id": "volume",
+              "name": "Громкость",
+              "command": "Tv_vol_%",
+              "params": [
+                {
+                  "id": "up",
+                  "name": "Up",
+                  "value": "up"
+                },
+                {
+                  "id": "down",
+                  "name": "Down",
+                  "value": "down"
+                }
+              ],
+              "type": "actions"
+            },
+            {
+              "id": "level", "name": "Выбор источника", "command": "Tv_%",
+              "params": [
+			    {"id": "zoom", "name": "Zoom", "value": "0"},
+                {"id": "1",    "name": "1",    "value": "1"},
+                {"id": "2",    "name": "2",    "value": "2"},
+                {"id": "3",    "name": "3",    "value": "3"}
+				],
+				"type": "actions"
+            },
+            {
+              "id": "level2", "name": " ", "command": "Tv_%",
+              "params": [
+                {"id": "4",    "name": "4",    "value": "4"},
+                {"id": "5",    "name": "5",    "value": "5"},
+                {"id": "6",    "name": "6",    "value": "6"}
+              ],
+              "type": "actions"
+            }
+			     
+          ]
+        }
+      ]
+    }
+  ],
+  "styles": [
+    "sl_pr.icon=icon_projector",
+	"sl_pr.main_method=power",
+    "sl_tv.icon=icon_tv",
+	"sl_tv.main_method=power",
+	"sl_tv.volume.up.icon=icon_up",
+    "sl_tv.volume.down.icon=icon_down",
+	"sl_tv.volume.invisible=true"
+  ]
+}
