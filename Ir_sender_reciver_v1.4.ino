@@ -3,13 +3,11 @@
 #include <IRsend.h>
 #include "samsung_ir_code.h"
 #include "epson_ir_code.h"
-#include "etc_ir_code.h"
- 
-
-
+#include "etc_ir_code.h" 
  
 //how many clients should be able to telnet to this ESP8266
 #define MAX_SRV_CLIENTS 3
+
 const char* ssid = "SSID";
 const char* password = "PASSWORD";
 
@@ -50,7 +48,6 @@ void setup() {
 }
  
 void loop() {
- // while (1) {sansung_tv1_power; delay(100);}
   uint8_t i;
   //check if there are any new clients
   if (server.hasClient()){
